@@ -6,8 +6,9 @@ metadata:
     name: mean-app-angular-service
     app: mean-app-webpage
 spec:
+  type: LoadBalancer
   ports:
-    - port: 4200
+    - port: 80
       targetPort: 4200
   selector:
     name: mean-app-angular-pod
