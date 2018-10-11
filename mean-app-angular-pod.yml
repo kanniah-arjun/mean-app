@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mean-app-angular-pod
+  labels:
+    name: mean-app-angular-pod
+    app: mean-app-webpage
+    type: angular-frontend
+spec:
+    containers:
+      - name: mean-app-angular-container
+        image: akanniah/mean-app-devops-frontend
+        ports:
+          - containerPort: 4200
+            name: angular-ui
+            protocol: TCP
+

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mean-app-expressnode-pod
+  labels:
+    name: mean-app-expressnode-pod
+    app: mean-app-webpage
+    type: expressnode-backend
+spec:
+    containers:
+      - name: mean-app-expressnode-container
+        image: akanniah/mean-app-devops-backend
+        ports:
+          - containerPort: 3000
+            protocol: TCP
